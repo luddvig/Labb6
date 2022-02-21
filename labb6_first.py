@@ -113,9 +113,9 @@ def main():
     print("Antal element =", n)
     input("Tidtagning, tryck enter")
 
-    # Tidtagning
-    sok_tid = timeit.timeit(stmt = lambda: binary_search(lista, testartist), number = 10000)
-    print("Sökningen tog", round(sok_tid, 10)/10000, "sekunder")
+    # Tidtagning. Obs minskar number till 100 för linsearch, tar mycket lång tid annars
+    sok_tid = timeit.timeit(stmt = lambda: binary_search(lista, testartist), number = 10000)  
+    print("Sökningen tog", round(sok_tid, 10)/10000, "sekunder") # Minska division från 10000 till 100 om linsearch
 
 
 main()
