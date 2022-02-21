@@ -59,9 +59,9 @@ def make_hash_list(artistobjektlista):
     return artist_dict
 
 
-def hashsearch(dicti, name):
-    """Funktion för hashsökning. Tar in en dictionary (hashlista) samt eftersök namn som type str."""
-    if dicti.get(name).artistnamn == name:
+def hashsearch(dicti, key):
+    """Funktion för hashsökning. Tar in en dictionary (hashlista) samt eftersök key som type str."""
+    if dicti.get(key).artistnamn == key:
         return True
     else:
         return "Hittades inte"
